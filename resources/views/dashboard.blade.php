@@ -27,7 +27,7 @@
 
 <!-- Stats Cards -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-    <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-xl shadow-lg p-6 text-white fade-in">
+    <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-xl shadow-lg p-6 text-white">
         <div class="flex items-center justify-between mb-2">
             <span class="text-green-100">Total Pemasukan</span>
             <i class="fas fa-arrow-up text-2xl"></i>
@@ -35,7 +35,7 @@
         <p class="text-3xl font-bold">Rp {{ number_format($totalIncome, 0, ',', '.') }}</p>
     </div>
 
-    <div class="bg-gradient-to-br from-red-500 to-red-600 rounded-xl shadow-lg p-6 text-white fade-in">
+    <div class="bg-gradient-to-br from-red-500 to-red-600 rounded-xl shadow-lg p-6 text-white">
         <div class="flex items-center justify-between mb-2">
             <span class="text-red-100">Total Pengeluaran</span>
             <i class="fas fa-arrow-down text-2xl"></i>
@@ -43,7 +43,7 @@
         <p class="text-3xl font-bold">Rp {{ number_format($totalExpense, 0, ',', '.') }}</p>
     </div>
 
-    <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl shadow-lg p-6 text-white fade-in">
+    <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl shadow-lg p-6 text-white">
         <div class="flex items-center justify-between mb-2">
             <span class="text-indigo-100">Saldo</span>
             <i class="fas fa-wallet text-2xl"></i>
@@ -53,7 +53,7 @@
 </div>
 
 <!-- Financial Health Alert -->
-<div class="mb-8 p-6 rounded-xl shadow-lg fade-in flash-message
+<div class="mb-8 p-6 rounded-xl shadow-lg
     {{ $healthStatus['status'] == 'danger' ? 'bg-red-50 border-l-4 border-red-500' : '' }}
     {{ $healthStatus['status'] == 'warning' ? 'bg-yellow-50 border-l-4 border-yellow-500' : '' }}
     {{ $healthStatus['status'] == 'success' ? 'bg-green-50 border-l-4 border-green-500' : '' }}">
@@ -78,7 +78,7 @@
 
 <!-- Budget Progress -->
 @if($budgets->count() > 0)
-<div class="bg-white rounded-xl shadow-lg p-6 mb-8 fade-in flash-message">
+<div class="bg-white rounded-xl shadow-lg p-6 mb-8">
     <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
         <i class="fas fa-bullseye text-indigo-600"></i>
         Budget Progress Bulan Ini
@@ -120,7 +120,7 @@
 
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
     <!-- Expense Chart -->
-    <div class="bg-white rounded-xl shadow-lg p-6 fade-in">
+    <div class="bg-white rounded-xl shadow-lg p-6">
         <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
             <i class="fas fa-chart-pie text-indigo-600"></i>
             Pengeluaran per Kategori
@@ -137,7 +137,7 @@
     </div>
 
     <!-- Recent Transactions -->
-    <div class="bg-white rounded-xl shadow-lg p-6 fade-in">
+    <div class="bg-white rounded-xl shadow-lg p-6">
         <div class="flex items-center justify-between mb-4">
             <h3 class="text-xl font-bold flex items-center gap-2">
                 <i class="fas fa-history text-indigo-600"></i>
@@ -187,7 +187,7 @@
 </div>
 
 <!-- Quick Actions -->
-<div class="bg-white rounded-xl shadow-lg p-6 fade-in flash-message">
+<div class="bg-white rounded-xl shadow-lg p-6">
     <h3 class="text-xl font-bold mb-4">Quick Actions</h3>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <a href="{{ route('transactions.create') }}" class="p-4 bg-gradient-to-br from-green-500 to-green-600 text-white rounded-lg text-center">
